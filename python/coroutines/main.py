@@ -1,11 +1,12 @@
 from sys import argv
 import asyncio
+import threading
 
 
 async def func():
     print("Async")
     await asyncio.sleep(1)
-    print("Django")
+    print(f"Django in thread {threading.currentThread().ident}")
 
 
 async def main(*, coroutines_count):

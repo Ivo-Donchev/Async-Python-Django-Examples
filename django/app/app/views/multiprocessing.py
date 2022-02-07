@@ -15,16 +15,6 @@ def func():
 
 
 def view_with_multiprocessing(request):
-    """
-    Pros:
-        - allows scaling by CPU
-    Cons:
-        - It's just slow
-        - Impossible for Django to tell you for "flying processes"
-        - Impossible retry mechanism
-        - Unusable for GET requests (SELECT)
-        - We already have a tool for that - Celery
-    """
     processes = []
 
     for i in range(6):

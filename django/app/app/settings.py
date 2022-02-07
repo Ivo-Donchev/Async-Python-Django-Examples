@@ -70,7 +70,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres:///async_django'),
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+DATABASES['default']['ATOMIC_REQUESTS'] = False
 
 AUTH_PASSWORD_VALIDATORS = [
     {
